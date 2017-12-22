@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta hcarset="UTF-8">
+    <script
+    src="https://code.jquery.com/jquery-3.2.0.min.js"
+    integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id='container'>
+
+        <div> fruit </div>
+        <ul class='nav1'>
+            <li> apple </li>
+            <li> banana </li>
+            <li> grape </li>
+
+        </ul>
+
+        <ul class='nav2'>
+            <li> lion </li>
+            <li> tiger </li>
+            <li> fox </li>
+
+        </ul>
+
+
+    </div>
+
+    <script>
+        $("div#container li:contains('ap')").css("color", "red");
+        $("div#container ul:has(li)").css( "background-color", "yellow");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../script/jquery-3.2.0.js"></script>
+</head>
+
+<body>
+	<div>
+		<ul>
+			<li id="ch">
+				충청도
+				<ol>
+					<li id="ch1">충청북도
+						<ul>
+							<li id="ch1-1">청주시</li>
+							<li id="ch1-2">충주시</li>
+						</ul>
+
+					</li>
+
+					<li id="ch2">충청남도
+						<ul>
+							<li id="ch2-1">대전시</li>
+							<li id="ch2-2">천안시</li>
+						</ul>
+					</li>
+				</ol>
+			</li>
+			<li> 경기도</li>
+
+		</ul>
+	</div>
+
+	<script>
+
+		$("li#ch1-1").parent().css("background-color", "yellow");
+		$("li#ch1-1").parents("ol").css("color", "red");
+
+	</script>
+
+</body>
+</html>

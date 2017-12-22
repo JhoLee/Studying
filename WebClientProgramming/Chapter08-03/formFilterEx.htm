@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script
+        src="https://code.jquery.com/jquery-3.2.0.min.js"
+        integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+        crossorigin="anonymous"></script>
+
+        
+    </head>
+
+    <body>
+        <form name="member" method="post" action="#">
+
+            <table width="400" cellspacing="0" border="1">
+                <tr>
+                    <td width="100" align="center">성명</td>
+                    <td width="350" align="left">
+                        <input type="text" name="id" size="20" tabindex="1"/>
+                        </td>
+                </tr>
+
+                <tr>
+                    <td width="100" align="center">회원등급</td>
+                    <td width="350" align="left">
+                        <select>
+                            <option value="Nothing">등급 선택</option>
+                            <option value="Diamond">다이아몬드</option>
+                            <option vlaue="Gold">골드</option>
+                            <option value="Silver">실버</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <table width="400" cellspacing="0" border="0">
+                <tr>
+                    <td width="400" align="center">
+                        <input type="reset" value="입력 취소" />&nbsp; &nbsp;
+                        <input type="submit" value="저장" />
+
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+
+        <script>
+            $("*").css( {'font-size':'10pt'} );
+            $("form").submit( function() { return false; } );
+
+            $('option').click(function(e) {
+                var myval = $('select > option:selected').val();
+                myval += " 등급입니다.";
+                alert(myval);
+            });
+
+            $('input[type=text]').val('이름을 입력하세요.');
+            
+            </script>
+    </body>
+</html>

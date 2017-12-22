@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src = "../script/jquery-3.2.0.js"></script>
+	<style>
+	div, p {
+		float:left; 
+		margin: 10px;
+		background-color:#ffffff; 
+		border: #00ff00 thin solid;
+	}
+	div#sub {
+		width: 100px;
+		height: 100px;
+		border: #ff0000 thin solid;
+	}
+
+	p {
+		width: 80px;
+		height: 80px;
+		border: #000000 thin solid;
+
+	}
+
+</style>
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="test"></div>
+		<div id="sub">
+			<p align="center">div<br>div<br>div<br>p</p>
+		</div>
+
+		<p id = sub align="center">div<br>p</p>
+		<p align="center">div<br>p</p>
+	</div>
+
+	<script>
+		$("div#container").children("p").css("background-color", "yellow");
+		$("div#container").children().css("color","red");
+		$("div#test").nextAll("#sub").css("color", "blue");
+	</script>
+
+</body>
+</html>
+

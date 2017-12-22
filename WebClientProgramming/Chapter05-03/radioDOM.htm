@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+
+		function info(form) {
+
+			var subject_len = form.subject.length;
+			var str = "";
+			for(var i = 0; i<subject_len; i++) {
+				if(form.subject[i].checked==true) {
+					str += i +1 + " 번째 항목이 선택되었습니다.\n";
+					str += " 선택된 항목의 이름 : " + form.subject[i].name + "\n";
+					str += "선택된 항목의 값 : " + form.subject[i].value + "\n\n";
+					alert(str);
+					break;
+				}
+			}
+
+			
+
+			if(i == 4) {
+				alert("항목을 선택하지 않았습니다.");
+
+			}
+
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<form name="myform">
+		<b> 당신이 가장 좋아하는 교과목을 선택하세요. </b>b> <br> <br>
+		<input type=radio name="subject" VALUE="A"> ASP <br>
+		<input type=radio name="subject" VALUE="J"> JsP <br>
+		<input type=radio name="subject" VALUE="P"> PHP <br>
+		<input type=radio name="subject" VALUE="C"> c++ <br><br>
+		<input type="button" value="확인" onClick="javascript:info(this.form)">
+	</form>
+</body>
+</html>
